@@ -28,27 +28,11 @@
               <ul class="nav">
                 <a class="brand" href="home">Página inicial</a>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle " data-toggle="dropdown">Chancelaria <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle " data-toggle="dropdown">Cadastros <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li ><a href="pessoa">Ir.'.</a></li>
-                    <li ><a href="dependente">Dependente</a></li>
-                    <li class="divider"></li>
-                    <li ><a href="sessao">Sess&atilde;o</a></li>
-                    <li ><a href="merito">Merito de Frequencia</a></li>
-                    <li ><a href="listarPresenca">Listar Presen&ccedil;a</a></li>
-                    <li ><a href="listarPresencaMestre">Listar Presen&ccedil;a de Mestres</a></li>
-                    <li ><a href="aniversarios">Aniversariantes do M&ecirc;s</a></li>
-                    <li ><a href="anuario">Anuario</a></li>
-                    <li class="divider"></li>
-                    <li ><a href="pessoaInativa">Ir.'. Adormecidos ou Quitados</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle " data-toggle="dropdown">Secretaria <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li ><a href="cargo">Cargo</a></li>
-                    <li class="divider"></li>
-                    <li ><a href="cargoPessoa">Diretoria</a></li>
+                    <li ><a href="pessoa">Departamento</a></li>
+                    <li ><a href="dependente">Produto</a></li>
+                    <li ><a href="sessao">Categoria</a></li>
                   </ul>
                 </li>
               </ul>
