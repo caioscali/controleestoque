@@ -16,6 +16,7 @@
     <title>Controle de Estoque</title>
     <meta name="author" content="Caio Cezar Scali"/>
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.js"></script>
   </head>
   <body>
