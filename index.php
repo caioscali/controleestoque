@@ -5,6 +5,8 @@
   function __autoload($class_name){
     require_once 'classes/' . $class_name . '.class.php';
   }
+
+  require_once 'config/url.php';
 ?>
 
 <!DOCTYPE HTML>
