@@ -1,6 +1,6 @@
 <?php
 
-define('DB_HOST', 'mysql..com.br');
-define('DB_NAME', 'arlsrenascenca');
-define('DB_USER', 'arlsrenasc_add1');
+define('DB_HOST', 'mysql.3pontinhos.com.br');
+define('DB_NAME', '3pontinhos');
+define('DB_USER', '3pontinhos');
 define('DB_PASS', 'ccs270388');

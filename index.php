@@ -10,7 +10,7 @@
 <!DOCTYPE HTML>
 <html land="pt-BR">
   <head>
-    <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" /> 
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8" /> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Controle de Estoque</title>
@@ -26,7 +26,7 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <a class="brand" href="home">P&aacute;gina inicial</a>
+                <a class="brand" href="home">Página inicial</a>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle " data-toggle="dropdown">Chancelaria <b class="caret"></b></a>
                   <ul class="dropdown-menu">
