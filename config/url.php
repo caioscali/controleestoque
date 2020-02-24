@@ -8,11 +8,11 @@ $erro         = false;
 
 if(($paginaAtual=='' || $paginaAtual=='home') && file_exists('home.php')){
     $incluir = 'home.php';
-}elseif($paginaAtual=='departamento'){
+}elseif($paginaAtual=='departamentos'){
     $incluir = 'departamento.php';
-}elseif($paginaAtual=='categoria'){
+}elseif($paginaAtual=='categorias'){
     $incluir = 'categoria.php';
-}elseif($paginaAtual=='produto'){
+}elseif($paginaAtual=='produtos'){
     $incluir = 'produto.php';
 }else{
     $erro = true;    

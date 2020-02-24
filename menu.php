@@ -10,18 +10,15 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Produtos</a>
+        <a class="nav-link" href="produtos">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Categorias</a>
+        <a class="nav-link" href="categorias">Categorias</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Empresas</a>
+        <a class="nav-link" href="departamentos">Departamentos</a>
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-md-0">
-      <input class="form-control" type="text" placeholder="Search">
-    </form>
   </div>
 </nav>
