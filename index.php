@@ -22,7 +22,7 @@
     <script src="js/bootstrap.js"></script>
   </head>
   <body>
-    <div class="container">
+    
       <header class="masthead">
         <?php include_once("menu.php") ?>
   		</header>
@@ -35,6 +35,6 @@
           include_once($incluir);
         }
       ?>
-    </div>
+    
   </body>
 </html>
