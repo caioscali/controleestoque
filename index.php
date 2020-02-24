@@ -33,9 +33,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle " data-toggle="dropdown">Cadastros <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li ><a href="pessoa">Departamento</a></li>
-                    <li ><a href="dependente">Produto</a></li>
-                    <li ><a href="sessao">Categoria</a></li>
+                    <li ><a href="departamento">Departamento</a></li>
+                    <li ><a href="produto">Produto</a></li>
+                    <li ><a href="categoria">Categoria</a></li>
                   </ul>
                 </li>
               </ul>
