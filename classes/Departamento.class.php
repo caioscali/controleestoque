@@ -28,31 +28,24 @@ class Departamento extends Crud{
         
     public function insert(){
 
-		$sql  = "INSERT INTO $this->table (nome) VALUES (:nome)";
+		$sql  = "INSERT INTO $this->table (nome, empresa) VALUES (:nome, :empresa)";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
-                return $stmt->execute(); 
+		$stmt->bindParam(':empresa', $this->empresa);
+        
+        return $stmt->execute(); 
 
 	}
 
 	public function update($id){
 
-		$sql  = "UPDATE $this->table SET nome = :nome WHERE id = :id";
+		$sql  = "UPDATE $this->table SET nome = :nome, empresa= :empresa WHERE id = :id";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
-                $stmt->bindParam(':id', $id);
+		$stmt->bindParam(':empresa', $this->empresa);
+        $stmt->bindParam(':id', $id);
 		return $stmt->execute();
 
 	}
         
-        public function updatePessoa($id){
-
-		$sql  = "UPDATE $this->table SET idPessoa = :idPessoa WHERE id = :id";
-		$stmt = DB::prepare($sql);
-		$stmt->bindParam(':idPessoa', $this->idPessoa);
-                $stmt->bindParam(':id', $id);
-		return $stmt->execute();
-
-	}
-
 }

@@ -24,24 +24,7 @@
   <body>
     <div class="container">
       <header class="masthead">
-        <h1 class="muted">Controle de Estoque</h1>
-        <nav class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <a class="brand" href="home">Página inicial</a>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle " data-toggle="dropdown">Cadastros <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li ><a href="departamento">Departamento</a></li>
-                    <li ><a href="produto">Produto</a></li>
-                    <li ><a href="categoria">Categoria</a></li>
-                  </ul>
-                </li>
-              </ul>
-      			</div>
-  		    </div>
-  			</nav>
+        <?php include_once("menu.php") ?>
   		</header>
       <?php
         if($erro==true){
