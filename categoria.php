@@ -2,7 +2,7 @@
 	$categoria = new Categoria();
     //Cadastro de Categoria
     if(isset($_POST['cadastrar'])):
-    	var_dump('oi');
+ 
     	$descricao = $_POST['descricao'];
     	$categoria->setDescricao($descricao);
 
