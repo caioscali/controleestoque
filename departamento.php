@@ -37,6 +37,7 @@ endif;
             <tr>
                 <th>Departamento:</th>
                 <th>Empresa:</th>
+                <th>Desativado:</th>
                 <th>Ação:</th>
             </tr>
         </thead>
@@ -48,7 +49,8 @@ endif;
             <tbody>
                 <tr>
                     <td><?php echo $value->nome; ?></td>
-                    <td><?php echo $value->empresa; ?></td>
+                    <td><?php echo $value->empresa; ?></td> 
+                    <td><?php echo $value->desativado; ?></td>
                     <td>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
