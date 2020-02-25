@@ -53,10 +53,10 @@ endif;
                     <td><?php echo $value->nome; ?></td>
                     <td><?php echo $value->empresa; ?></td>
                     <td>
-                        <button type="button" class="bnt btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
                             <input type="hidden" name="id" value="<?php echo $value->id; ?>">
-                            <button name="excluir" type="submit" onclick="fn_excluir();" class="bnt bnt-danger">Excluir</button>
+                            <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
                         </form>
                     </td>
                 
