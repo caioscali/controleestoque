@@ -31,7 +31,7 @@ $produto = new Produto();
         </thead>
         <?php
         $ordem = 'descricao';
-        $produtos = findAllProdutos();
+        $produtos = $produto->findAllProdutos();
          foreach ($produtos as $value) :
         ?>
             <tbody>
