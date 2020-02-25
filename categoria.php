@@ -13,7 +13,7 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Categorias</h1>
     <form class="col-auto ">
-	  	<div class="form-group" method='post'>
+	  	<div class="form-group" method='POST'>
             <label>Descricao:</label>
             <input type="text" class="form-control" id="descricao" name="descricao">
         </div>
