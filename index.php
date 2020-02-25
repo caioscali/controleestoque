@@ -49,5 +49,4 @@ require_once 'config/url.php';
     <script src="js/feather.min.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
-
 </html>
