@@ -10,7 +10,7 @@ class Categoria extends Crud{
         
     public function getDescricao() {
         return $this->descricao;
-        }
+    }
 
     public function setDescricao($descricao) {
         $this->descricao = $descricao;
@@ -30,7 +30,7 @@ class Categoria extends Crud{
 		$sql  = "UPDATE $this->table SET descricao = :descricao WHERE id = :id";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':descricao', $this->descricao);
-                $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id', $id);
 		return $stmt->execute();
 
 	}
