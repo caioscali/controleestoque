@@ -1,10 +1,21 @@
 <?php 
 $departamento = new Departamento();
-    //Cadastro de Categoria
+//Cadastro de Categoria
 if(isset($_POST['cadastrar'])):
 
     $nome = $_POST['nome'];
     $empresa = $_POST['empresa'];
+    $departamento->setNome($nome);
+    $departamento->setEmpresa($empresa);
+
+    $departamento->insert();
+
+endif;
+
+if(isset($_POST['excluir'])):
+
+    $id = $_POST['id'];
+    
     $departamento->setNome($nome);
     $departamento->setEmpresa($empresa);
 
@@ -43,6 +54,10 @@ endif;
                     <td><?php echo $value->empresa; ?></td>
                     <td>
                         <button type="button" class="bnt btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
+                        <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
+                            <input type="hidden" name="id" value="<?php echo $value->id; ?>">
+                            <button name="excluir" type="submit" onclick="fn_excluir();" class="bnt bnt-danger">Excluir</button>
+                        </form>
                     </td>
                 
                 </tr>
