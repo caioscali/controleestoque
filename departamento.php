@@ -64,7 +64,7 @@ endif;
                     <td><?php echo $value->empresa; ?></td> 
                     <td><?php echo $value->desativado; ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lgx" onclick="load_modal('<?php echo $value->nome; ?>','')">Alterar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lgx" onclick="load_modal('<?php echo $value->nome; ?>','<?php echo $value->empresa; ?>')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
                             <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                             <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
