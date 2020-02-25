@@ -39,7 +39,7 @@ class Departamento extends Crud{
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
 		$stmt->bindParam(':empresa', $this->empresa);
-        $stmt->bindParam(':desativado', false);
+        $stmt->bindParam(':desativado', '1');
         return $stmt->execute(); 
 
 	}
