@@ -5,10 +5,10 @@
  
         $nome = $_POST['nome'];
         $empresa = $_POST['empresa'];
-        $categoria->setNome($nome);
-        $categoria->setEmpresa($empresa);
+        $departamento->setNome($nome);
+        $departamento->setEmpresa($empresa);
 
-        $categoria->insert();
+        $departamento->insert();
 
     endif;
 ?>
