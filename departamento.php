@@ -104,11 +104,11 @@ endif;
              <form class="col-auto " method="post">
                 <div class="form-group" >
                     <label>Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome" >
+                    <input type="text" class="form-control" id="text_nome" name="text_nome" >
                 </div>
                 <div class="form-group" >
                     <label>Empresa:</label>
-                    <input type="text" class="form-control" id="empresa" name="empresa">
+                    <input type="text" class="form-control" id="text_empresa" name="text_empresa">
                 </div>
                 <input type="submit" name="alterar" class="btn btn-primary" value="Alterar"> 
             </form>

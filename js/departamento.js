@@ -4,6 +4,6 @@ function fn_excluir(){
 	});
 }
 function load_modal(nome, empresa){
-	$('#nome').val(nome);
-	$('#empresa').val(empresa);
+	$('#text_nome').val(nome);
+	$('#text_empresa').val(empresa);
 }
