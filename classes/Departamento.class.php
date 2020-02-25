@@ -46,11 +46,10 @@ class Departamento extends Crud{
 
 	public function update($id){
 
-		$sql  = "UPDATE $this->table SET nome = :nome, empresa= :empresa WHERE id = :id";
+		$sql  = "UPDATE $this->table SET nome = :nome, empresa = :empresa WHERE id = :id";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
 		$stmt->bindParam(':empresa', $this->empresa);
-        
         $stmt->bindParam(':id', $id);
 		return $stmt->execute();
 
