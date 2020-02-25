@@ -21,7 +21,7 @@ class Categoria extends Crud{
 		$sql  = "INSERT INTO $this->table (descricao) VALUES (:descricao)";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':descricao', $this->descricao);
-                return $stmt->execute(); 
+        return $stmt->execute(); 
 
 	}
 
