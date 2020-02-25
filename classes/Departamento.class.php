@@ -60,7 +60,8 @@ class Departamento extends Crud{
         $desativado = true;
         $sql  = "UPDATE $this->table SET desativado = :desativado WHERE id = :id";
         $stmt = DB::prepare($sql);
-        $stmt->bindParam(':desativado', $desativado);  
+        $stmt->bindParam(':desativado', $desativado); 
+        $stmt->bindParam(':id', $id); 
         return $stmt->execute();
 
     }
