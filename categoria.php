@@ -15,7 +15,7 @@
     <form class="col-auto ">
 	    	<div class="form-group" method='post'>
                 <label>Descricao:</label>
-                <input type="text" class="form-control" id="descricao">
+                <input type="text" class="form-control" id="descricao" name="descricao">
             </div>
              <input type="submit" name="cadastrar" class="btn btn-primary" value="Cadastrar"> 
         </form>
