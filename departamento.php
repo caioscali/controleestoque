@@ -104,7 +104,7 @@ endif;
             <div class="modal-content">
              <form class="col-auto " method="post">
                 <div class="form-group" >
-                    <label>Nome:</label>
+                    <label>Nomeoi:</label>
                     <input type="text" class="form-control" id="text_nome" name="text_nome" >
                 </div>
                 <div class="form-group" >
