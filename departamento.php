@@ -23,7 +23,7 @@ endif;
 //Alterar de Departamento
 if(isset($_POST['alterar'])):
 
-    $id - $_POST['id'];
+    $id - $_POST['text_id'];
     $nome = $_POST['text_nome'];
     $empresa = $_POST['text_empresa'];
     $departamento->setNome($nome);
@@ -65,7 +65,7 @@ endif;
                     <td><?php echo $value->empresa; ?></td> 
                     <td><?php echo $value->desativado; ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lgx" onclick="load_modal('<?php echo $value->nome; ?>','<?php echo $value->empresa; ?>')">Alterar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lgx" onclick="load_modal('<?php echo $value->nome; ?>','<?php echo $value->empresa; ?>','<?php echo $value->id; ?>')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
                             <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                             <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
@@ -111,7 +111,7 @@ endif;
                     <label>Empresa:</label>
                     <input type="text" class="form-control" id="text_empresa" name="text_empresa">
                 </div>
-                <input type="hidden" name="id" value="<?php echo $value->id; ?>">
+                <input type="hidden" name="text_id" value="<?php echo $value->id; ?>">
                 <input type="submit" name="alterar" class="btn btn-primary" value="Alterar"> 
             </form>
         </div>
