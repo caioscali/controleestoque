@@ -111,7 +111,7 @@ endif;
                     <label>Empresa:</label>
                     <input type="text" class="form-control" id="text_empresa" name="text_empresa">
                 </div>
-                <input type="hidden" name="text_id" id="text_id">
+                <input type="text" name="text_id" id="text_id">
                 <input type="submit" name="alterar" class="btn btn-primary" value="Alterar"> 
             </form>
         </div>
