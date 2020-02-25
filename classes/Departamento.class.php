@@ -34,12 +34,12 @@ class Departamento extends Crud{
 	
         
     public function insert(){
-
+        $desativado = false;
 		$sql  = "INSERT INTO $this->table (nome, empresa, desativado) VALUES (:nome, :empresa, :desativado)";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
 		$stmt->bindParam(':empresa', $this->empresa);
-        $stmt->bindParam(':desativado', false);
+        $stmt->bindParam(':desativado', $desativado);
         return $stmt->execute(); 
 
 	}
