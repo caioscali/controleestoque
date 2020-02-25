@@ -64,7 +64,7 @@ endif;
                     <td><?php echo $value->empresa; ?></td> 
                     <td><?php echo $value->desativado; ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-t<?php echo $value->empresa; ?>arget="#mymodal" onclick="load.modal('<?php echo $value->nome; ?>','')">Alterar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lgx" onclick="load.modal('<?php echo $value->nome; ?>','')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
                             <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                             <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
@@ -81,6 +81,24 @@ endif;
 </div>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+             <form class="col-auto " method="post">
+                <div class="form-group" >
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" >
+                </div>
+                <div class="form-group" >
+                    <label>Empresa:</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa">
+                </div>
+                <input type="submit" name="cadastrar" class="btn btn-primary" value="Cadastrar"> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lgx" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modalAlterar">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
              <form class="col-auto " method="post">
