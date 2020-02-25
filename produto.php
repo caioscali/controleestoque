@@ -32,7 +32,7 @@ $produto = new Produto();
         <?php
         $ordem = 'descricao';
         $produtos = $produto->findAllProdutos();
-         foreach ($produtos as $value) :
+         foreach ($produtos as $key => $value) :
         ?>
             <tbody>
                 <tr>
