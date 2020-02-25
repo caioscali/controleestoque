@@ -17,11 +17,11 @@
     <form class="col-auto " method="post">
         <div class="form-group" >
             <label>nome:</label>
-            <input type="text" class="form-control" id="nome" >
+            <input type="text" class="form-control" id="nome" name="nome" >
         </div>
         <div class="form-group" >
             <label>Empresa:</label>
-            <input type="text" class="form-control" id="empresa" >
+            <input type="text" class="form-control" id="empresa" name="empresa">
         </div>
         <input type="submit" name="cadastrar" class="btn btn-primary" value="Cadastrar"> 
     </form>
