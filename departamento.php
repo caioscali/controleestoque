@@ -55,7 +55,7 @@ endif;
                     <td>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
-                            <input type="hidden" name="id" value="<?php echo $value->id; ?>">
+                            <input type="text" name="id" value="<?php echo $value->id; ?>">
                             <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
                         </form>
                     </td>
