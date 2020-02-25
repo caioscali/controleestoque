@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config/DB.class.php';
+require_once 'config/DB.class.php';
 
 abstract class Crud extends DB{
 
@@ -18,10 +18,10 @@ abstract class Crud extends DB{
 		return $stmt->fetch();
 	}
         
-    public function findAll($ordem){
-		$sql  = "SELECT * FROM $this->table order by :ordem";
+    public function findAll(){
+		$sql  = "SELECT * FROM $this->table";
 		$stmt = DB::prepare($sql);
-		$stmt->bindParam(':ordem', $ordem, PDO::PARAM_INT);
+		//$stmt->bindParam(':ordem', $ordem, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll();
 	}

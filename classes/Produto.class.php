@@ -27,11 +27,24 @@ class Produto extends Crud{
         }
 		
 		public function getNumeroPatrimonio() {
-			return this->numeroPatrimonio = $numeroPatrimonio;
+			return $this->numeroPatrimonio;
 		}
 		
-		public function serNumeroPatrimonio() {
-			this->marca = $marca;
+		public function setNumeroPatrimonio($numeroPatrimonio) {
+			$this->numeroPatrimonio = $numeroPatrimonio;
+		}
+
+		public function findAllProdutos(){
+			$sql  = "SELECT p.id AS id, p.descricao AS descricao, p.marca AS marca, p.numeroPatrimonio AS numeroPatrimonio,
+			 c.descricao AS categoria, dp.dataCadastro AS dataCadastro, dp.quantidade AS quantidade,
+			 d.nome AS departamento, d.empresa AS empresa
+			 FROM produto AS p
+					 INNER JOIN categoria AS c ON p.idCategoria = c.id
+					 INNER JOIN departamentoProdutos AS dp ON p.id = dp.idProduto					 
+					 INNER JOIN departamento AS d ON dp.idDepartamento = d.id";
+			$stmt = DB::prepare($sql);
+			$stmt->execute();
+			return json_encode ($stmt->fetchAll());
 		}
         
         public function insert(){
@@ -58,5 +71,7 @@ class Produto extends Crud{
 		return $stmt->execute();
 
 	}
+
+	
         
 }

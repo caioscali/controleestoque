@@ -24,6 +24,13 @@ class Departamento extends Crud{
     public function setEmpresa($empresa) {
         $this->empresa = $empresa;
     }
+
+    public function findAllDepartamento(){
+        $sql  = "SELECT * FROM $this->table ";
+        $stmt = DB::prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 	
         
     public function insert(){

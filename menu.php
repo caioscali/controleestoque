@@ -1,24 +1,33 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Controle de Estoque</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produtos">
+              <span data-feather="file"></span>
+              Produtos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categorias">
+              <span data-feather="shopping-cart"></span>
+              Categorias
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="departamentos">
+              <span data-feather="users"></span>
+              Departamentos
+            </a>
+          </li>
+         
+        </ul>
 
-  <div class="collapse navbar-collapse" id="navbarsExample04">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="produtos">Produtos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="categorias">Categorias</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="departamentos">Departamentos</a>
-      </li>
-      
-    </ul>
-  </div>
-</nav>
+        
+      </div>
+    </nav>
