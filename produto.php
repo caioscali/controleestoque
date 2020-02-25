@@ -1,4 +1,5 @@
-<?php $produto = new Produto();
+<?php 
+$produto = new Produto();
     
 ?>
 
@@ -30,7 +31,8 @@
         </thead>
         <?php
         $ordem = 'descricao';
-         foreach ($produto->findAllProdutos() as $key => $value) :
+        $produtos = $produto->findAllProdutos();
+         foreach ($produtos as $value) :
         ?>
             <tbody>
                 <tr>

@@ -40,7 +40,7 @@ class Produto extends Crud{
 			 d.nome AS departamento, d.empresa AS empresa
 			 FROM produto AS p
 					 INNER JOIN categoria AS c ON p.idCategoria = c.id
-					 INNER JOIN departamentoProdutos AS dp ON p.id = dp.idProduto					 
+					 INNER JOIN departamentoprodutos AS dp ON p.id = dp.idProduto	
 					 INNER JOIN departamento AS d ON dp.idDepartamento = d.id";
 			$stmt = DB::prepare($sql);
 			$stmt->execute();
