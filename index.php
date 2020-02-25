@@ -48,7 +48,6 @@ require_once 'config/url.php';
     <script src="js/bootstrap.bundle.min.js" ></script>
     <script src="js/feather.min.js"></script>
     <script src="js/dashboard.js"></script>
-    <script src="js/produto.js"></script>
 </body>
 
 </html>
