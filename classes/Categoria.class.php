@@ -4,7 +4,7 @@ require_once 'Crud.class.php';
 
 class Categoria extends Crud{
 	
-	protected $table = 'categoraia';
+	protected $table = 'categoria';
         
 	private $descricao;
         
