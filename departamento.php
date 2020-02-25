@@ -22,7 +22,7 @@ endif;
 
 //Alterar de Departamento
 if(isset($_POST['alterar'])):
-    var_dump('oi');
+
     $id - $_POST['id'];
     $nome = $_POST['text_nome'];
     $empresa = $_POST['text_empresa'];
@@ -111,6 +111,7 @@ endif;
                     <label>Empresa:</label>
                     <input type="text" class="form-control" id="text_empresa" name="text_empresa">
                 </div>
+                <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                 <input type="submit" name="alterar" class="btn btn-primary" value="Alterar"> 
             </form>
         </div>
