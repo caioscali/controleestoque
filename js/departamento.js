@@ -5,5 +5,5 @@ function fn_excluir(){
 }
 function load_modal(nome, empresa){
 	$('#nome').val(nome);
-	$('empresa').val(empresa);
+	$('#empresa').val(empresa);
 }
