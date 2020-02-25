@@ -39,7 +39,7 @@ class Departamento extends Crud{
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
 		$stmt->bindParam(':empresa', $this->empresa);
-        
+        $stmt->bindParam(':desativado', false);
         return $stmt->execute(); 
 
 	}
@@ -50,9 +50,19 @@ class Departamento extends Crud{
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':nome', $this->nome);
 		$stmt->bindParam(':empresa', $this->empresa);
+        
         $stmt->bindParam(':id', $id);
 		return $stmt->execute();
 
 	}
+
+    public function desativar($id){
+
+        $sql  = "UPDATE $this->table SET desativado = :desativado WHERE id = :id";
+        $stmt = DB::prepare($sql);
+        $stmt->bindParam(':desativado', false);  
+        return $stmt->execute();
+
+    }
         
 }
