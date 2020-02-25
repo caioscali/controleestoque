@@ -42,16 +42,10 @@ endif;
                     <td><?php echo $value->nome; ?></td>
                     <td><?php echo $value->empresa; ?></td>
                     <td>
-                        <?php echo "<a href='index.php?p=pessoa&acao=editar&id=" . $value->id . "'>Editar</a>"; ?>
-                        <?php
-                        if ($value->status == '1'){
-                            echo "<a href='index.php?p=pessoa&acao=inativar&id=" . $value->id ."'>Deletar</a>"; 
-                        }elseif ($value->status == '0'){
-                            echo "<a href='index.php?p=pessoa&acao=ativar&id=" . $value->id ."'>Inativo</a>";
-                        }
-                        ?>
+                        <button type="button" class="bnt btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
                     </td>
-                    </tr>
+                
+                </tr>
             </tbody>
 
     <?php
