@@ -30,7 +30,7 @@
         </thead>
         <?php
         $ordem = 'descricao';
-        // foreach ($produto->findAllProdutos() as $key => $value) :
+         foreach ($produto->findAllProdutos() as $key => $value) :
         ?>
             <tbody>
                 <tr>
@@ -46,7 +46,7 @@
             </tbody>
 
         <?php
-        // endforeach; ?>
+         endforeach; ?>
 
     </table>
 </div>
