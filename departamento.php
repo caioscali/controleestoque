@@ -23,7 +23,7 @@ endif;
 //Alterar de Departamento
 if(isset($_POST['alterar'])):
 
-    $id - $_POST['text_id'];
+    $id = $_POST['text_id'];
     $nome = $_POST['text_nome'];
     $empresa = $_POST['text_empresa'];
     $departamento->setNome($nome);
