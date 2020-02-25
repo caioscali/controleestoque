@@ -19,7 +19,7 @@ abstract class Crud extends DB{
 	}
         
     public function findAll(){
-		$sql  = "SELECT * FROM $this->table";
+		$sql  = "SELECT * FROM $this->table WHERE desativado = 0";
 		$stmt = DB::prepare($sql);
 		//$stmt->bindParam(':ordem', $ordem, PDO::PARAM_INT);
 		$stmt->execute();
