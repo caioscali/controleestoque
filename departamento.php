@@ -1,6 +1,6 @@
 <?php 
 $departamento = new Departamento();
-//Cadastro de Categoria
+//Cadastro de Departamento
 if(isset($_POST['cadastrar'])):
 
     $nome = $_POST['nome'];
@@ -11,12 +11,24 @@ if(isset($_POST['cadastrar'])):
     $departamento->insert();
 
 endif;
-
+// desativar Departamento
 if(isset($_POST['excluir'])):
 
     $id = $_POST['id'];
 
     $departamento->desativar($id);
+
+endif;
+
+//Alterar de Departamento
+if(isset($_POST['alterar'])):
+    $id - $_POST['id'];
+    $nome = $_POST['nome'];
+    $empresa = $_POST['empresa'];
+    $departamento->setNome($nome);
+    $departamento->setEmpresa($empresa);
+
+    $departamento->update($id);
 
 endif;
 ?>
@@ -52,7 +64,7 @@ endif;
                     <td><?php echo $value->empresa; ?></td> 
                     <td><?php echo $value->desativado; ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal" onclick="load.modal('','')">Alterar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-t<?php echo $value->empresa; ?>arget="#mymodal" onclick="load.modal('<?php echo $value->nome; ?>','')">Alterar</button>
                         <form class="form_excluir" method="post" style="float: left; margin: 0 15px">
                             <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                             <button name="excluir" type="submit" onclick="fn_excluir();" class="btn btn-danger">Excluir</button>
@@ -85,3 +97,4 @@ endif;
         </div>
     </div>
 </div>
+<script src="js/departamento.js"></script>

@@ -9,12 +9,21 @@ if(isset($_POST['cadastrar'])):
 	$categoria->insert();
 
 endif;
-
+// desativar categoria
 if(isset($_POST['excluir'])):
 
     $id = $_POST['id'];
 
     $categoria->desativar($id);
+
+endif;
+    //Alerar de Categoria
+if(isset($_POST['alterar'])):
+	$id - $_POST['id'];
+	$descricao = $_POST['descricao'];
+	$categoria->setDescricao($descricao);
+
+	$categoria->update($id);
 
 endif;
 ?>
