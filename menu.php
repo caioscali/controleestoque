@@ -2,20 +2,20 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="home">
               <span data-feather="home"></span>
               Dashboard <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="produtos">
-              <span data-feather="file"></span>
+              <span data-feather="box"></span>
               Produtos
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categorias">
-              <span data-feather="shopping-cart"></span>
+              <span data-feather="clipboard"></span>
               Categorias
             </a>
           </li>

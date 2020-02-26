@@ -27,7 +27,7 @@ abstract class Crud extends DB{
 	}
 
 	public function desativar($id){
-        $desativado = true;
+        $desativado = 1;// 0 para false e 1 para true
         $sql  = "UPDATE $this->table SET desativado = :desativado WHERE id = :id";
         $stmt = DB::prepare($sql);
         $stmt->bindParam(':desativado', $desativado); 

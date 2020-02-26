@@ -25,19 +25,10 @@ DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
   `id` int NOT NULL AUTO_INCREMENT,
   `descricao` varchar(45) NOT NULL,
+  `desativado` tinyint NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `categoria`
---
-
-LOCK TABLES `categoria` WRITE;
-/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (1,'Escritorio');
-/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `departamento`
@@ -48,21 +39,12 @@ DROP TABLE IF EXISTS `departamento`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `departamento` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) NOT NULL,
-  `empresa` varchar(45) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `empresa` varchar(255) NOT NULL,
+  `desativado` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `departamento`
---
-
-LOCK TABLES `departamento` WRITE;
-/*!40000 ALTER TABLE `departamento` DISABLE KEYS */;
-INSERT INTO `departamento` VALUES (1,'RH','COCAL');
-/*!40000 ALTER TABLE `departamento` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `departamentoprodutos`
@@ -82,18 +64,8 @@ CREATE TABLE `departamentoprodutos` (
   KEY `departamento_idx` (`idDepartamento`),
   CONSTRAINT `departamento` FOREIGN KEY (`idDepartamento`) REFERENCES `departamento` (`id`),
   CONSTRAINT `produto` FOREIGN KEY (`idProduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `departamentoprodutos`
---
-
-LOCK TABLES `departamentoprodutos` WRITE;
-/*!40000 ALTER TABLE `departamentoprodutos` DISABLE KEYS */;
-INSERT INTO `departamentoprodutos` VALUES (1,2,1,'2020-02-24',10);
-/*!40000 ALTER TABLE `departamentoprodutos` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `produto`
@@ -107,22 +79,13 @@ CREATE TABLE `produto` (
   `descricao` varchar(45) NOT NULL,
   `marca` varchar(45) NOT NULL,
   `numeroPatrimonio` varchar(45) NOT NULL,
-  `idCategoria` int DEFAULT NULL,
+  `idCategoria` int NOT NULL,
+  `desativado` tinyint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idCategoria_idx` (`idCategoria`),
   CONSTRAINT `idCategoria` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `produto`
---
-
-LOCK TABLES `produto` WRITE;
-/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (2,'Papel','Chamex','123',1);
-/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -133,4 +96,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-25  6:26:26
+-- Dump completed on 2020-02-25 18:23:41

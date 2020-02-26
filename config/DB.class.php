@@ -27,4 +27,8 @@ class DB{
 		return self::getInstance()->prepare($sql);
 	}
 
+	public static function lastInsertId(){
+		return self::getInstance()->lastInsertId();
+	}
+
 }

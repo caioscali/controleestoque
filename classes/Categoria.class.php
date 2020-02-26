@@ -17,10 +17,11 @@ class Categoria extends Crud{
     }
         
     public function insert(){
-
-		$sql  = "INSERT INTO $this->table (descricao) VALUES (:descricao)";
+		$desativado = 0; // 0 para false e 1 para true
+		$sql  = "INSERT INTO $this->table (descricao, desativado) VALUES (:descricao, :desativado)";
 		$stmt = DB::prepare($sql);
 		$stmt->bindParam(':descricao', $this->descricao);
+		$stmt->bindParam(':desativado', $desativado);
         return $stmt->execute(); 
 
 	}
