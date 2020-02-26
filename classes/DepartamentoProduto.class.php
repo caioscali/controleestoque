@@ -43,21 +43,6 @@ class DepartamentoProduto extends Crud{
 		$this->idDepartamento = $idDepartamento;
 	}
    
-   public function findAllEstoque()
-	{
-		$sql  = "SELECT p.id AS id, p.descricao AS descricao, p.marca AS marca, p.numeroPatrimonio AS numeroPatrimonio,
-					c.id AS idCategoria, c.descricao AS categoria, dp.id AS idDepartamentoProduto,
-					date_format(str_to_date(dp.dataCadastro, '%Y-%m-%d'), '%d/%m/%Y') AS dataCadastro,
-			 		dp.quantidade AS quantidade, d.id AS idDepartamento, d.nome AS departamento, d.empresa AS empresa 
-					FROM produto AS p
-					INNER JOIN categoria AS c ON p.idCategoria = c.id
-					INNER JOIN departamentoprodutos AS dp ON p.id = dp.idProduto	
-					INNER JOIN departamento AS d ON dp.idDepartamento = d.id  
-					WHERE p.desativado = 0";
-		$stmt = DB::prepare($sql);
-		$stmt->execute();
-		return $stmt->fetchAll();
-	}
     public function insert(){
 		$dataCadastrar = date("Y/m/d");
 		$sql  = "INSERT INTO $this->table (dataCadastro, quantidade, idProduto, idDepartamento) 
