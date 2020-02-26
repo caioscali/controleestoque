@@ -79,7 +79,9 @@ class Produto extends Crud
 		$stmt->bindParam(':numeroPatrimonio', $this->numeroPatrimonio);
 		$stmt->bindParam(':idCategoria', $this->idCategoria);
 		$stmt->bindParam(':desativado', $desativado);
-		return $stmt->execute();;
+		$stmt->execute();
+		$idCadastrado = DB::lastInsertId();
+		return $idCadastrado;
 	}
 
 	public function update($id)
