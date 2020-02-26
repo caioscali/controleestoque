@@ -101,7 +101,6 @@ if (isset($_POST['alterar'])) :
     $produto->setMarca($marca);
     $produto->setNumeroPatrimonio($numeroPatrimonio);
     $produto->setIdCategoria($idCategoria);
-    $produto->update($id);
     if ($produto->update($id)) {
         $departamentoproduto->setQuantidade($quantidade);
         $departamentoproduto->setIdProduto($id);
