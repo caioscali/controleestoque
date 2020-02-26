@@ -30,5 +30,4 @@ class DB{
 	public static function lastInsertId(){
 		return self::getInstance()->lastInsertId();
 	}
-
 }
