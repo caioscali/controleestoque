@@ -1,8 +1,4 @@
-function fn_validar() {
-  $('.form_excluir').submit(function () {
-    return confirm("Click ok para continuar")
-  });
-}
+
 function load_modal(descricao, marca, numeroPatrimonio, idCategoria, quantidade, dataCadastro, idDepartamento, id, idDepartamentoProduto) {
   debugger;
   $('#text_id').val(id);
