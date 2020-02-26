@@ -10,7 +10,6 @@ class DepartamentoProduto extends Crud{
 	private $quantidade;
 	private $idProduto;
 	private $idDepartamento;
-
 	        
 	public function getDataCadastro() {
 	    return $this->dataCadastro;
@@ -54,7 +53,6 @@ class DepartamentoProduto extends Crud{
 		$stmt->bindParam(':idProduto', $this->idProduto);
 		$stmt->bindParam(':idDepartamento', $this->idDepartamento);
         return $stmt->execute(); 
-
 	}
 
 	public function update($id){
@@ -69,9 +67,6 @@ class DepartamentoProduto extends Crud{
 		$stmt->bindParam(':idDepartamento', $this->idDepartamento);
         $stmt->bindParam(':id', $id);
 		return $stmt->execute();
-
 	}
-        
-   
-
+	
 }

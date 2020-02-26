@@ -2,17 +2,17 @@
     <h1 class="h2">Produtos</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal_cadastrar_produto">Cadastrar Novo produto</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal_cadastrar_produto">Cadastrar Novo Produto</button>
         </div>
     </div>
 </div>
-
 
 <?php
 $produto = new Produto();
 $departamento = new Departamento();
 $categoria = new Categoria();
 $departamentoproduto = new DepartamentoProduto();
+
 //Cadastro de Departamento
 if (isset($_POST['cadastrar'])) :
 
@@ -28,13 +28,10 @@ if (isset($_POST['cadastrar'])) :
     $produto->setNumeroPatrimonio($numeroPatrimonio);
     $produto->setIdCategoria($idCategoria);
 
-
     if ($idProduto = $produto->insert()) {
         $departamentoproduto->setQuantidade($quantidade);
         $departamentoproduto->setIdProduto($idProduto);
         $departamentoproduto->setIdDepartamento($idDeparteamento);
-
-
 
         if ($departamentoproduto->insert()) {
 ?>
@@ -59,16 +56,12 @@ if (isset($_POST['cadastrar'])) :
         <?php }
     }
 
-
-
-
 endif;
 // desativar Departamento
 if (isset($_POST['excluir'])) :
 
     $id = $_POST['id'];
 
-    
     if ($produto->desativar($id)) {
         ?>
             <div class="row col-12">
@@ -88,7 +81,6 @@ if (isset($_POST['excluir'])) :
                     <h6>Erro ao Excluir o Produto! Entre em contato com o suporte!</h6>
                 </div>
             </div>
-    
         <?php }
 
 endif;
@@ -139,8 +131,6 @@ if (isset($_POST['alterar'])) :
 <?php }
     }
 
-
-
 endif;
 ?>
 
@@ -157,8 +147,6 @@ endif;
                 <th>Departamento:</th>
                 <th>Empresa:</th>
                 <th>Ação:</th>
-
-
             </tr>
         </thead>
         <?php
@@ -190,19 +178,11 @@ endif;
                     </td>
                 </tr>
             </tbody>
-
         <?php
         endforeach; ?>
-
     </table>
 </div>
-
-
-
-
-
-
-
+<!-- Modal Cadastro Produto -->
 <div class="modal fade modal_cadastrar_produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -299,12 +279,12 @@ endif;
         </div>
     </div>
 </div>
-
+<!-- Modal Alterar Produto -->
 <div class="modal fade modal_alterar_produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Aleterar Produto</h5>
+                <h5 class="modal-title">Alterar Produto</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -323,7 +303,6 @@ endif;
                                             <option value="<?php echo ($val->id); ?>"> <?php echo $val->nome . ' - ', $val->empresa; ?> </option>
                                         <?php
                                         endforeach; ?>
-
                                     </select>
                                 </div>
                             </div>
@@ -339,7 +318,6 @@ endif;
                                         endforeach; ?>
                                     </select>
                                 </div>
-
                             </div>
                         </div>
                         <div class="row col-12">

@@ -25,14 +25,6 @@ class Departamento extends Crud{
         $this->empresa = $empresa;
     }
 
-    public function findAllDepartamento(){
-        $sql  = "SELECT * FROM $this->table";
-        $stmt = DB::prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-	
-        
     public function insert(){
         $desativado = 0; // 0 para false e 1 para true
 		$sql  = "INSERT INTO $this->table (nome, empresa, desativado) VALUES (:nome, :empresa, :desativado)";
@@ -41,7 +33,6 @@ class Departamento extends Crud{
 		$stmt->bindParam(':empresa', $this->empresa);
         $stmt->bindParam(':desativado', $desativado);
         return $stmt->execute(); 
-
 	}
 
 	public function update($id){
@@ -52,9 +43,6 @@ class Departamento extends Crud{
 		$stmt->bindParam(':empresa', $this->empresa);
         $stmt->bindParam(':id', $id);
 		return $stmt->execute();
-
 	}
 
-    
-        
 }

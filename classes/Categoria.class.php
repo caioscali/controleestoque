@@ -23,7 +23,6 @@ class Categoria extends Crud{
 		$stmt->bindParam(':descricao', $this->descricao);
 		$stmt->bindParam(':desativado', $desativado);
         return $stmt->execute(); 
-
 	}
 
 	public function update($id){
@@ -33,8 +32,6 @@ class Categoria extends Crud{
 		$stmt->bindParam(':descricao', $this->descricao);
         $stmt->bindParam(':id', $id);
 		return $stmt->execute();
-
 	}
-        
 
 }

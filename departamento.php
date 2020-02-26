@@ -19,7 +19,6 @@ if (isset($_POST['cadastrar'])) :
     $departamento->setNome($nome);
     $departamento->setEmpresa($empresa);
 
-
     if ($departamento->insert()) {
 ?>
         <div class="row col-12">
@@ -42,14 +41,11 @@ if (isset($_POST['cadastrar'])) :
 
     <?php }
 
-
 endif;
 // desativar Departamento
 if (isset($_POST['excluir'])) :
 
     $id = $_POST['id'];
-
-
 
     if ($departamento->desativar($id)) {
     ?>
@@ -83,7 +79,6 @@ if (isset($_POST['alterar'])) :
     $empresa = $_POST['text_empresa'];
     $departamento->setNome($nome);
     $departamento->setEmpresa($empresa);
-
 
     if ($departamento->update($id)) {
     ?>
@@ -119,8 +114,6 @@ endif;
             </tr>
         </thead>
         <?php
-        $ordem = 'descricao';
-        //$departamento = findAllDepartamento();
         foreach ($departamento->findAll() as $key => $value) :
         ?>
             <tbody>
@@ -137,13 +130,12 @@ endif;
 
                 </tr>
             </tbody>
-
         <?php
         endforeach;
         ?>
     </table>
 </div>
-
+<!-- Modal Cadastrar Departamento-->
 <div class="modal fade modal_cadastrar_departamento" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -183,7 +175,7 @@ endif;
         </div>
     </div>
 </div>
-
+<!-- Modal Alterar Departamento -->
 <div class="modal fade modal_alterar_departamento" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modalAlterar">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

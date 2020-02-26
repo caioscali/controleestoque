@@ -17,5 +17,3 @@ if(($paginaAtual=='' || $paginaAtual=='home') && file_exists('produto.php')){
 }else{
     $erro = true;    
 }
-
-?>

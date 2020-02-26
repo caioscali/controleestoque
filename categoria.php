@@ -34,7 +34,6 @@ if (isset($_POST['excluir'])) :
 
     $id = $_POST['id'];
 
-
     if ($categoria->desativar($id)) {
     ?>
         <div class="row col-12">
@@ -83,10 +82,7 @@ if (isset($_POST['alterar'])) :
                 <h6 class="h6">Erro ao alterar Categoria! Entre em contato com o suporte!</h6>
             </div>
         </div>
-
-
 <?php }
-
 
 endif;
 ?>
@@ -127,18 +123,17 @@ endif;
 
                 </tr>
             </tbody>
-
         <?php
         endforeach;
         ?>
     </table>
 </div>
-
+<!-- Modal Cadastrar Categoria -->
 <div class="modal fade modal_cadastrar_categoria" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog " role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Cadastro Departamento</h5>
+                <h5 class="modal-title">Cadastro Categoria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -169,12 +164,12 @@ endif;
         </div>
     </div>
 </div>
-
+<!-- Modal Alterar Categoria -->
 <div class="modal fade modal_alterar_categoria" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modalAlterar">
     <div class="modal-dialog " role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Alterar Departamento</h5>
+                <h5 class="modal-title">Alterar Categoria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
